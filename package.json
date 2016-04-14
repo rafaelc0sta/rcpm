@@ -1,0 +1,13 @@
+{
+  "name": "rcpm",
+  "version": "1.0.0",
+  "description": "A simple package manager for myself",
+  "main": "./lib/rcpm.js",
+  "scripts": {},
+  "author": "Rafael Costa <rafael@rafaelcosta.me>",
+  "license": "MIT",
+  "bin": {
+    "rcpm": "./bin/rcpm"
+  },
+  "repository": "https://github.com/rafaelc0sta/rcpm.git"
+}

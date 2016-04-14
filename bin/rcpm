@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+var action = process.argv[2];
+var parameter = process.argv[3];
+
+var path = require('path');
+var fs = require('fs');
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+
+if (action == 'install') {
+  if (parameter == null) {
+    console.log("No package provided.");
+  }
+  require(lib+'/rcpm.js').downloadAndInstall(parameter, false);
+} else if (action == 'show') {
+  if (parameter == null) {
+    console.log("No package provided.");
+  }
+  require(lib+'/rcpm.js').showInfo(parameter);
+} else if (action == 'update') {
+  if (parameter == null) {
+    console.log("No package provided.");
+  }
+  require(lib+'/rcpm.js').downloadAndInstall(parameter, true);
+}
